@@ -385,8 +385,7 @@ client.on('message', message => {
 
     ** -support | سيرفر الدعم**:wrench:  :envelope_with_arrow: 
   
-  ** -contact | ارسال اقتراح او لمراسلة صاحب البوت**
-  
+    
 **  ======:blossom:نــتــمــنــآ لــكــم آســتــمـــتــآع :blossom:======  **`)
      message.author.sendEmbed(embed)
      

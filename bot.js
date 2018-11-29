@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const db = require('quick.db');
-const prefix = "!";
 const client = new Discord.Client();   
 const giphy = require('giphy-api')();    
 const googl = require('goo.gl'); 
@@ -3393,7 +3392,12 @@ client.on('message', msg => {
 
 
 
+
+
+
+
 client.on('message', function(message) {
+	var prefix = "-";
     if(message.content.startsWith(prefix + "report")) {
         let messageArgs = message.content.split(" ").slice(1).join(" ");
         let messageReason = message.content.split(" ").slice(2).join(" ");

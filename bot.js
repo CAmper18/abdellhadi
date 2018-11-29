@@ -3470,5 +3470,6 @@ reaction2.on("collect", r => {
 
 
 
+
 client.login(process.env.BOT_TOKEN);
 			      

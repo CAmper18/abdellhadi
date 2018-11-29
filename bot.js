@@ -3401,20 +3401,20 @@ client.on('message', function(message) {
     if(message.content.startsWith(prefix + "report")) {
         let messageArgs = message.content.split(" ").slice(1).join(" ");
         let messageReason = message.content.split(" ").slice(2).join(" ");
-        if(!messageReason) return message.reply("**# Specify a reason!**");
+        if(!messageReason) return message.reply("**# حدد سببًا!**");
     let mUser = message.mentions.users.first();
-    if(!mUser) return message.channel.send("Couldn't find user.");
+    if(!mUser) return message.channel.send("لا يمكن العثور على المستخدم.");
     let Rembed = new Discord.RichEmbed()
-    .setTitle("`New Report!`")
+    .setTitle("`تقرير جديد!`")
     .setThumbnail(message.author.avatarURL)
     .addField("**# - Reported User:**",mUser,true)
     .addField("**# - Reported User ID:**",mUser.id,true)
     .addField("**# - Reason:**",messageReason,true)
     .addField("**# - Channel:**",message.channel,true)
     .addField("**# - Time:**",message.createdAt,true)
-    .setFooter("لو ان الابلاغ فيه مزح راح يتعرض صاحب الابلاغ لقوبات")
+    .setFooter("لو ان الابلاغ فيه مزح راح يتعرض صاحب الابلاغ لعقوبات")
 message.channel.send(Rembed)
-message.channel.send("__Are you sure you want to send this to the Server owner??__").then(msg => {
+message.channel.send("__هل أنت متأكد من أنك تريد إرسال هذا إلى الادارة ؟؟__").then(msg => {
     msg.react("✅")
     msg.react("❌")
 .then(() => msg.react('❌'))
@@ -3426,10 +3426,10 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
     message.guild.owner.send(Rembed)
-    message.reply("**# - Done! 🎇**");
+    message.reply("**# - انتهى! 🎇**");
 })
 reaction2.on("collect", r => {
-    message.reply("**# - Canceled!**");
+    message.reply("**# - تم الالغاء!**");
 })
 })
 }

@@ -3401,7 +3401,7 @@ client.on('message', msg => {
 
 
 
-lient.on('message', async message => {
+client.on('message', async message => {
 		  var prefix = "-";
   if(message.content.startsWith(prefix + "voicesetup")) {
   if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply(':x: **ليس لديك الصلاحيات الكافية**');
